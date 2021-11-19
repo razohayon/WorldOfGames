@@ -1,5 +1,8 @@
 import os
 
+SCORES_FILE_NAME = "db/Scores.txt"
+BAD_RETURN_CODE = 6
+
 
 def clear_console():
     command = 'clear'
