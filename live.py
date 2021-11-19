@@ -37,10 +37,11 @@ guess it back
         diff_valid = validate_choose(value=int(game_diff), min_val=1, max_val=5)
     # print("Game is:", game, "Difficulty:", game_diff)
     if game == "1":
-        MemoryGame.play(difficulty=int(game_diff))
+        game_status = MemoryGame.play(difficulty=int(game_diff))
     elif game == "2":
-        GuessGame.play(difficulty=int(game_diff))
+        game_status = GuessGame.play(difficulty=int(game_diff))
     else:
-        CurrencyRouletteGame.play(difficulty=int(game_diff))
+        game_status = CurrencyRouletteGame.play(difficulty=int(game_diff))
+    return game_status
 
 

@@ -1,18 +1,13 @@
 from random import sample
 from time import sleep
-import os
+from Utils import clear_console
 
-def clearConsole():
-    command = 'clear'
-    if os.name in ('nt', 'dos'):  # If Machine is running on Windows, use cls
-        command = 'cls'
-    os.system(command)
 
 def generate_sequence(difficulty):
     seq_list = sample(range(1, 101), difficulty)
     print(seq_list)
     sleep(0.7)
-    clearConsole()
+    clear_console()
     return seq_list
 
 
