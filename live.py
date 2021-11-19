@@ -1,4 +1,9 @@
 from classes.color import BColors
+import GuessGame
+import CurrencyRouletteGame
+import MemoryGame
+
+
 def welcome(name):
     welcome_greet = BColors.HEADER + "Hello " + name + " and welcome to the\
 World of Games (WoG)." + "\n" + "Here you can find many cool games to\
@@ -31,3 +36,11 @@ guess it back
         game_diff = input(BColors.BOLD + "Please choose game difficulty from 1 to 5:" + BColors.ENDC)
         diff_valid = validate_choose(value=int(game_diff), min_val=1, max_val=5)
     # print("Game is:", game, "Difficulty:", game_diff)
+    if game == "1":
+        MemoryGame.play(difficulty=int(game_diff))
+    elif game == "2":
+        GuessGame.play(difficulty=int(game_diff))
+    else:
+        CurrencyRouletteGame.play(difficulty=int(game_diff))
+
+
