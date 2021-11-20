@@ -1,3 +1,3 @@
-nadav=37
-noga=28
-dvir=138
+nadav=220
+dvir=100
+noga=40

@@ -1,4 +1,4 @@
-from Utils import SCORES_FILE_NAME
+from Utils import SCORES_FILE_NAME, sort_file_scores, my_sort
 import os
 import fileinput
 import sys
@@ -52,7 +52,4 @@ def add_score(username, difficulty):
                 sys.stdout.write(line)
             else:
                 sys.stdout.write(line)
-
-
-
-add_score("DviR", 6)
+    sort_file_scores()
