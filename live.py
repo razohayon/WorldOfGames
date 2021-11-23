@@ -2,6 +2,7 @@ from classes.color import BColors
 import GuessGame
 import CurrencyRouletteGame
 import MemoryGame
+from Score import add_score
 
 
 def welcome(name):
@@ -19,7 +20,7 @@ def validate_choose(value, min_val, max_val):
         return False
 
 
-def load_game():
+def load_game(name):
     game_valid = False
     diff_valid = False
     while not game_valid:
@@ -42,6 +43,8 @@ guess it back
         game_status = GuessGame.play(difficulty=int(game_diff))
     else:
         game_status = CurrencyRouletteGame.play(difficulty=int(game_diff))
+    if game_status is True:
+        add_score(username=name, difficulty=game_diff)
     return game_status
 
 

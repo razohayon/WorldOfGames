@@ -1,3 +1,4 @@
 nadav=220
 dvir=100
 noga=40
+razo=28
